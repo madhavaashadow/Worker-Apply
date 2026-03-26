@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Madhavaa Shadow</title>
+
+<style>
+body{background:#0f0f0f;color:#fff;font-family:Arial;margin:0}
+header{background:#0072ff;padding:20px;text-align:center;font-size:28px}
+.container{padding:20px}
+.card{background:#1c1c1c;padding:20px;margin:10px;border-radius:12px}
+input,textarea{width:100%;padding:10px;margin:5px;border:none;border-radius:5px}
+button{padding:10px;background:#00c6ff;border:none;border-radius:5px}
+</style>
+
+</head>
+<body>
+
+<header>
+🏠 MADHAVAA SHADOW  
+<br>Tiles & Marble Experts (Basti, UP)
+</header>
+
+<div class="container">
+
+<div class="card">
+<h3>👷 Worker Apply</h3>
+<input id="name" placeholder="Name">
+<input id="phone" placeholder="Phone">
+<textarea id="exp" placeholder="Experience"></textarea>
+<button onclick="send()">Apply</button>
+</div>
+
+<div class="card">
+<h3>💰 Pay via UPI</h3>
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=7081721056@upi">
+<p>Scan & Pay</p>
+</div>
+
+</div>
+
+<script>
+function send(){
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let exp=document.getElementById("exp").value;
+
+let msg=`Worker Apply:%0AName:${name}%0APhone:${phone}%0AExp:${exp}`;
+window.open(`https://wa.me/917081573977?text=${msg}`);
+}
+</script>
+
+</body>
+</html>
